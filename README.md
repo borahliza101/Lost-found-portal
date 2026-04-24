@@ -94,6 +94,3 @@ To develop a web-based system that allows students to:
 - Fast search and filtering  
 - Organized item listings  
 
----
-
-## 💻 Project Structure
