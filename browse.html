@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Items - Lost & Found</title>
+    <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Lost<span>&Found</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html" class="active">Browse</a>
+            <a href="report.html">Report</a>
+            <a href="my-items.html">My Items</a>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="search-container">
+        <h1>Community Postings</h1>
+        <p>Search through all lost and found reports on campus.</p>
+        <div class="search-box" style="display: flex; justify-content: center; gap: 10px; max-width: 700px; margin: 0 auto;">
+            <input type="text" id="searchBar" placeholder="Search for items (e.g. 'iPhone', 'Wallet')...">
+            <button onclick="filterItems()" style="padding: 10px 25px; border-radius: 30px; border: none; background: #4dabf7; color: white; font-weight: bold; cursor: pointer;">Search</button>
+        </div>
+    </div>
+
+    <div class="items-grid" id="itemsGrid">
+        </div>
+
+    <script src="index.js"></script> <script src="browse.js"></script>
+</body>
+</html>

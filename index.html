@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Lost & Found</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Lost<span>&Found</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="report.html">Report</a>
+            <a href="my-items.html">My Items</a>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="welcome-banner">
+            <h1>Welcome, <span id="userName">Student</span>!</h1>
+            <p>Help your campus community by reporting lost or found items.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card" onclick="location.href='report.html'">
+                <div class="card-icon">➕</div>
+                <h3>Report Item</h3>
+                <p>Lost or found something? Let everyone know.</p>
+            </div>
+            <div class="card" onclick="location.href='browse.html'">
+                <div class="card-icon">🔎</div>
+                <h3>Browse Items</h3>
+                <p>Search for your lost belongings here.</p>
+            </div>
+            <div class="card" onclick="location.href='my-items.html'">
+                <div class="card-icon">📦</div>
+                <h3>My Items</h3>
+                <p>View and manage your previous reports.</p>
+            </div>
+        </div>
+
+        <div class="recent-section">
+            <h2 style="margin-bottom: 20px; color: #333; margin-top: 50px;">Recently Reported</h2>
+            <div id="recentItemsList" class="recent-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="seed.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Item - Lost & Found</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Lost<span>&Found</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="report.html" class="active">Report</a>
+            <a href="my-items.html">My Items</a>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Report an Item</h2>
+            <p>Fill in the details below to help the community.</p>
+            
+            <form id="reportForm">
+                <div class="input-group">
+                    <label>Type</label>
+                    <select id="type">
+                        <option value="Lost">Lost an Item</option>
+                        <option value="Found">Found an Item</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Item Name</label>
+                    <input type="text" id="itemName" placeholder="e.g. Black Dell Laptop" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Contact Number</label>
+                    <div style="display: flex; gap: 5px;">
+                        <input type="text" value="+91" style="width: 60px; text-align: center; background: #eee;" readonly>
+                        <input type="tel" id="contactNo" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required title="Please enter a valid 10-digit phone number">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Category</label>
+                    <select id="category">
+                        <option value="Electronics">Electronics</option>
+                        <option value="ID Cards">ID Cards / Keys</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Books">Books/Stationery</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Location</label>
+                    <input type="text" id="location" placeholder="e.g. Library Study Hall" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Description</label>
+                    <textarea id="desc" placeholder="Provide details (color, brand, marks)..." rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Post Report</button>
+                <button type="button" class="back-btn" onclick="location.href='index.html'">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>
